@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radial Tree Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 3px;
+        }
+        .node text {
+            font: 12px sans-serif;
+        }
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Occupational exposure to Generative AI</h1>
+
+<!-- Add Legend with Margins -->
+<div style="margin: 20px;">
+    <strong>Exposure Category (at ISCO08 4-digit level)</strong>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="width: 10px; height: 10px; background-color: grey; margin-right: 5px;"></div> Not Affected
+    </div>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="width: 10px; height: 10px; background-color: blue; margin-right: 5px;"></div> Augmentation Potential
+    </div>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="width: 10px; height: 10px; background-color: yellow; margin-right: 5px;"></div> The Big Unknown
+    </div>
+    <div style="display: flex; align-items: center; margin: 10px 0;">
+      <div style="width: 10px; height: 10px; background-color: red; margin-right: 5px;"></div> Automation Potential
+    </div>
+
+    <!-- Add the citation below the legend -->
+    <div style="margin-top: 20px;">
+        <em>Source: Gmyrek, P., Berg, J., Bescond, D. 2023. Generative AI and jobs: A global analysis of potential effects on job quantity and quality, ILO Working Paper 96 (Geneva, ILO). <a href="https://doi.org/10.54394/FHEM8239">https://doi.org/10.54394/FHEM8239</a></em>
+    </div>
+
+    <p><em>Plot by Pawel Gmyrek, ILO (<a href="https://github.com/pgmyrek">https://github.com/pgmyrek</a>)</em></p>
+
+
+</div>
+
+
+    <div id="tree-container"></div>
+
+    <!-- Include D3.js from CDN -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Link your script file -->
+    <script src="script.js"></script>
+</body>
+</html>
